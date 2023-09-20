@@ -3,7 +3,7 @@ Aplikasi ini bertujuan untuk menampilkan kondisi cuaca pada kota yang dipilih. A
 
 # Fitur
 - Memiliki Searchbar untuk mencari nama kota
-- Menampilkan cuaca, suhu, dan kelembapan pada kota yang dipilih
+- Menampilkan nama kota, hari dan tanggal, cuaca, suhu, dan kelembapan pada kota yang dipilih
 
 # Cara Penggunaan
 Untuk penggunaan aplikasi ini cukup mengetikan nama lokasi di search bar bagian atas dan hasil pencarian akan langsung ditampilkan
