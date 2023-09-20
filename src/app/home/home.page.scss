@@ -1,27 +1,145 @@
-#container {
+$size1: 8em;
+$size2: 3.5em;
+$size3: 3em;
+$size4: 2em;
+$size5: 1.5em;
+$size6: 1em;
+
+ion-content {
+  --ion-font-family: 'Roboto', sans-serif;
+}
+
+ion-header {
+  --ion-text-color: #555;
+  --background: #2980B9;
+}
+
+ion-content {
+  --background: #346e77;
+  --ion-text-color: #222;
+}
+
+.main {
+  display: block;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.searchBar {
+  background-color: #346e77;
+  color: white;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.city {
+  display: flex;
+  align-items: start;
+  font-size: $size3;
+  font-weight: bolder;
+  padding-top: 0.2em;
+  padding-left: 0.5em;
 }
 
-#container a {
-  text-decoration: none;
+.date {
+  display: flex;
+  align-items: start;
+  font-size: $size5;
+  font-weight: bold;
+  padding-left: 1.1em;
+  color: white;
+}
+
+.description {
+  display: block;
+  font-size: $size3;
+  font-weight: bold;
+}
+
+.temperature {
+  display: block;
+  font-size: $size1;
+  font-weight: bold;
+  padding-top: 20px;
+  margin: 0px;
+  color: white;
+}
+
+.icon {
+  display: block;
+  font-size: $size4;
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
+
+ion-grid {
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lembab {
+  display: block;
+  font-weight: bolder;
+}
+
+.humid {
+  font-size: 2em;
+  color: white;
+}
+
+.img-lembab {
+  width: 60%;
+  height: 30%;
+}
+
+.max {
+  display: block;
+  font-weight: bolder;
+}
+
+.img-max {
+  margin-top: -30px;
+  width: 55%;
+  height: 55%;
+}
+
+.min {
+  display: block;
+  font-weight: bolder;
+}
+
+.img-min {
+  margin-top: -30px;
+  width: 55%;
+  height: 55%;
+}
+
+.temp {
+  font-size: 2em;
+  color: white;
+}
+
+.panah {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+}
+
+.img-load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10em;
+  margin-left: 2.5em;
+  width: 80%;
+  height: 80%;
 }

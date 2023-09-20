@@ -1,20 +1,76 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Weather App </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-searchbar
+    [(ngModel)]="cityName"
+    (ngModelChange)="loadData()"
+    animated="true"
+    placeholder="Search City Here"
+    class="searchBar"
+  ></ion-searchbar>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div *ngIf="!loading">
+    <div class="main">
+      <span class="city">{{cityName}}</span>
+      <span class="date">{{todayDate | date: "EEE, dd MMM"}}</span>
+
+      <div class="icon">
+        <img [src]="weatherIcon" alt="" />
+      </div>
+
+      <span class="description">{{ (weatherDetails?.description) }}</span>
+      <span class="temperature"
+        >{{ (weatherTemp?.temp - 273.15).toFixed(0) }}°C</span
+      >
+    </div>
+
+    <ion-grid>
+      <ion-col>
+        <span class="max"
+          >Max <br />
+          Temperature:</span
+        >
+        <br />
+        <span class="temp"
+          >{{ (weatherTemp?.temp_max - 273.15).toFixed(0) }}°C</span
+        >
+        <br />
+        <br />
+        <img src="../../assets/max-temp.png" alt="" class="img-max" />
+      </ion-col>
+
+      <ion-col>
+        <span class="lembab">Humidity:</span>
+        <br />
+        <br />
+        <span class="humid">{{ (weatherTemp?.humidity) }}%</span>
+        <br />
+        <br />
+        <img src="../../assets/kelembapan.png" alt="" class="img-lembab" />
+      </ion-col>
+
+      <ion-col>
+        <span class="min"
+          >Min <br />
+          Temperature:</span
+        >
+        <br />
+        <span class="temp"
+          >{{ (weatherTemp?.temp_min - 273.15).toFixed(0) }}°C</span
+        >
+        <br />
+        <br />
+        <img src="../../assets/min-temp.png" alt="" class="img-min" />
+      </ion-col>
+    </ion-grid>
   </div>
+
+  <div *ngIf="loading">
+    <img src="../../assets/search__1_-removebg-preview.png" alt="" class="img-load">
+  </div>
+
 </ion-content>
